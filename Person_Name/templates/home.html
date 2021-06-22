@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <h1 style="text-align:center">Welcome Fellows!!!</h1>
+    <h2 style="text-align:center" > This Page is about Intro of the Person you wanted to know : ) </h2>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+
+    {%for message in get_flashed_messages()%}
+    <h1>{{message}}</h1>
+    {%endfor%}
+</head>
+<body>
+<form action="details" method="post">
+<p><b>Person Name :</b> <input type="text" name="name" value="" required/></p>
+
+<br>
+<input type="submit" value="search"/>
+</form>
+</body>
+</html>
